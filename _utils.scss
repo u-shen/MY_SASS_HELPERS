@@ -1,0 +1,34 @@
+// Overlay
+@mixin bg-overlay($img, $color: #000000) {
+  background-image: linear-gradient(to-right, rgba($color, 1), rgba($color, .2)), url($img);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+// Background-images
+@mixin bg-img($img) {
+  background-image: url($img);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+// Transition
+@mixin transition($property: all, $duration: 0.3s, $timing-function: ease-in-out, $delay: 0s) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+  transition-delay: $delay;
+}
+
+// buttons
+@mixin btn($pd-y: 10px, $pd-x: 15px, $bg: #000, $color: #fff) {
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: $pd-y $pd-x;
+  background: $bg;
+  color: $color
+}
