@@ -1,6 +1,6 @@
 // Overlay
 @mixin bg-overlay($img, $color: #000000) {
-  background-image: linear-gradient(to-right, rgba($color, 1), rgba($color, .2)), url($img);
+  background-image: linear-gradient(to-right, rgba($color, .9), rgba($color, .1)), url($img);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -31,4 +31,31 @@
   padding: $pd-y $pd-x;
   background: $bg;
   color: $color
+}
+
+// center
+@mixin center($axis: "both") {
+  @if $axis =="both" or $axis =="vertical" {
+    top: 50%;
+  }
+
+  @if $axis =="both" or $axis =="horizontal" {
+    left: 50%;
+  }
+
+  transform: if($axis =="horizontal", translateX(-50%), if($axis =="both", translateX(-50%), null)) if($axis =="vertical", translateY(-50%), if($axis =="both", translateY(-50%), null));
+}
+
+// Circle
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  display: inline-block;
+  border-radius: 100%;
+}
+
+// Square
+@mixin square($size) {
+  width: $size;
+  height: $size;
 }
