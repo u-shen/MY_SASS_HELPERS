@@ -44,6 +44,14 @@
   background-position: center center;
 }
 
+// fix image overflow
+@mixin img-fluid {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+}
+
 // Transition
 @mixin transition($property: all, $duration: 0.3s, $timing-function: ease-in-out, $delay: 0s) {
   transition-property: $property;
