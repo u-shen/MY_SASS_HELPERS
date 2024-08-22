@@ -1,5 +1,5 @@
 // Flex
-@mixin flex($direction: null, $justify: null, $align: null, $wrap: null) {
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start, $wrap: wrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -19,15 +19,15 @@
 }
 
 // grid
-@mixin grid($columns: null, $rows: null, $gap: null) {
+@mixin grid($columns: auto-fit, $rows: auto-fit, $gap: 0) {
   display: grid;
-  grid-template-rows: $rows;
+  grid-auto-rows: minmax($rows, auto);
   grid-template-columns: $columns;
   gap: $gap;
 }
 
-@mixin grid-fit($size: 300px, $gap: null) {
+@mixin grid-fit($size: 300px, $gap: 0) {
   display: grid;
-  grid-template-columns: repeat(fit-content, minmax($size, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax($size, 1fr));
   gap: $gap;
 }

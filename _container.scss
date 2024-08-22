@@ -1,0 +1,28 @@
+@mixin container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  // Optional: Add responsive behavior
+  @media (min-width: 576px) {
+    // sm
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    // md
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    // lg
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    // xl
+    max-width: 1140px;
+  }
+}
