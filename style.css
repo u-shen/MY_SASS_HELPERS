@@ -1,0 +1,99 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+:root {
+  --fs-xl: clamp(3rem, 5vw + 1rem, 10rem);
+  --fs-600: 3rem;
+  --fs-500: 2rem;
+  --fs-400: 1rem;
+}
+@media (max-width: 767px) {
+  :root {
+    --fs-600: 2rem;
+    --fs-500: 1rem;
+    --fs-400: .9rem ;
+  }
+}
+
+p:first-child {
+  font-size: var(--fs-400);
+}
+
+p.last {
+  font-size: var(--fs-xl);
+}
+
+/*# sourceMappingURL=style.css.map */
