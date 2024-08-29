@@ -1,4 +1,4 @@
-// margin
+// Margin
 @mixin margin-x($margin-right, $margin-left: $margin-right) {
   margin-left: $margin-left;
   margin-right: $margin-right;
@@ -16,7 +16,7 @@
   }
 }
 
-// padding
+// Padding
 @mixin padding-x($padding-right, $padding-left: $padding-right) {
   padding-left: $padding-left;
   padding-right: $padding-right;
@@ -36,7 +36,7 @@
   background-position: center center;
 }
 
-// Background-images
+// Background-Images
 @mixin bg-image($img) {
   background-image: url($img);
   background-repeat: no-repeat;
@@ -44,7 +44,7 @@
   background-position: center center;
 }
 
-// fix image overflow
+// Fix Image Overflow
 @mixin img-fluid {
   max-width: 100%;
   height: auto;
@@ -60,7 +60,7 @@
   transition-delay: $delay;
 }
 
-// buttons
+// Buttons
 @mixin button($pd-y: 10px, $pd-x: 15px, $bg: $dark, $color: $light) {
   border: none;
   outline: none;
@@ -71,7 +71,7 @@
   color: $color
 }
 
-// center
+// Center
 @mixin center($axis: "both") {
   @if $axis =="both" or $axis =="vertical" {
     top: 50%;
